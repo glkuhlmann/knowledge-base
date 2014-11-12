@@ -26,7 +26,7 @@ function kb_register_post_types() {
     'view_item'          => __( 'View Article', 'knowledge-base' ),
     'search_items'       => __( 'Search Articles', 'knowledge-base' ),
     'not_found'          => __( 'No articles found.', 'knowledge-base' ),
-    'not_found_in_trash' => __( 'No articles found in trash.' 'knowledge-base' )
+    'not_found_in_trash' => __( 'No articles found in trash.', 'knowledge-base' )
   );
 
   $supports = array(
