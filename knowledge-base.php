@@ -1,10 +1,10 @@
 <?php
 /*
-Plugin Name: Knowledge Base
-Plugin URI:  http://github.com/galengidman/knowledge-base
+Plugin Name: Spyderserve Knowledge Base
+Plugin URI:  http://github.com/glkuhlmann/knowledge-base
 Description: Post types and taxonomies for a WordPress-powered knowledge base. Integrate into your theme as you choose. Use <a href="https://wordpress.org/plugins/custom-post-type-permalinks/">Custom Post Type Permalinks</a> for further control over permalink structure.
-Author:      Galen Gidman
-Author URI:  http://galengidman.com/
+Author:      Gary Kuhlmann and Galen Gidman
+Author URI:  http://glkuhlmann.com/
 Version:     1.0
 Text Domain: knowledge-base
 */
@@ -52,7 +52,7 @@ function kb_register_post_types() {
     'supports'    => $supports
   );
 
-  register_post_type( 'kb_article', $args );
+  register_post_type( 'spyder-kb', $args );
 
 }
 add_action( 'init', 'kb_register_post_types' );
@@ -70,7 +70,7 @@ function kb_register_taxonomies() {
     )
   );
 
-  register_taxonomy( 'kb_category', 'kb_article', $args );
+  register_taxonomy( 'kb_category', 'spyder-kb', $args );
 
 }
 add_action( 'init', 'kb_register_taxonomies' );
