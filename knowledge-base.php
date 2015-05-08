@@ -44,16 +44,18 @@ function kb_register_post_types() {
     'public'      => true,
     'menu_icon'   => 'dashicons-sos',
     'rewrite'     => array(
-      'slug'       => 'kb',
+      'slug'       => 'kbase',
       'with_front' => false
      ),
     'has_archive' => true,
     'hierarchical' => true,
-    'capability_type' => 'post',
+    'capability_type' => 'page',
     'supports'    => $supports
   );
 
   register_post_type( 'spyder-kb', $args );
+  
+  flush_rewrite_rules();
 
 }
 add_action( 'init', 'kb_register_post_types' );
@@ -66,7 +68,7 @@ function kb_register_taxonomies() {
   $args = array(
     'hierarchical' => true,
     'rewrite'      => array(
-     'slug'       => 'category',
+     'slug'       => 'kb',
      'with_front' => false
     )
   );
