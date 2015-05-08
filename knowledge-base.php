@@ -35,9 +35,8 @@ function kb_register_post_types() {
     'author',
     'thumbnail',
     'excerpt',
-    'custom-fields',
     'revisions',
-    'post-formats'
+    'page-attributes'
   );
 
   $args = array(
@@ -49,6 +48,8 @@ function kb_register_post_types() {
       'with_front' => false
      ),
     'has_archive' => true,
+    'hierarchical' => true,
+    'capability_type' => 'post',
     'supports'    => $supports
   );
 
